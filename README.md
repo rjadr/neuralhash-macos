@@ -44,20 +44,7 @@ You have a few options to install this module:
 You can install the latest version directly from the `main` branch on GitHub using `pip`:
 
 ```bash
-pip install git+https://github.com/yourusername/neuralhash-macos.git
-```
-Replace `yourusername/neuralhash-macos.git` with your actual GitHub repository URL.
-
-To install a specific branch, tag, or commit, you can append `@` followed by the reference:
-```bash
-# Install from a specific branch
-pip install git+https://github.com/yourusername/neuralhash-macos.git@develop_branch
-
-# Install from a specific tag (e.g., v0.1.0)
-pip install git+https://github.com/yourusername/neuralhash-macos.git@v0.1.0
-
-# Install from a specific commit hash
-pip install git+https://github.com/yourusername/neuralhash-macos.git@your_commit_hash
+pip install git+https://github.com/rjadr/neuralhash-macos.git
 ```
 
 #### Option B: Install from a local clone (For development or specific versions)
@@ -65,7 +52,7 @@ pip install git+https://github.com/yourusername/neuralhash-macos.git@your_commit
 Clone the repository and install using `pip`:
 
 ```bash
-git clone https://github.com/yourusername/neuralhash-macos.git # Replace with your repo URL
+git clone https://github.com/rjadr/neuralhash-macos.git # Replace with your repo URL
 cd neuralhash-macos
 pip install .
 ```
