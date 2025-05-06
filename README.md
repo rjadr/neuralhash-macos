@@ -33,23 +33,48 @@ It's often best to install PyObjC using pip. Depending on your macOS version and
 ```bash
 pip install pyobjc-core pyobjc-framework-Cocoa pyobjc-framework-Vision
 ```
-*Note: PyObjC version compatibility can sometimes be an issue. The `setup.py` specifies versions `>=9.0`, which are generally compatible with recent macOS versions. If you encounter issues, you may need to experiment with different PyObjC versions.*
+*Note: PyObjC version compatibility can sometimes be an issue. The `pyproject.toml` specifies versions `>=9.0`, which are generally compatible with recent macOS versions. If you encounter issues, you may need to experiment with different PyObjC versions.*
 
 ### 2. Install NeuralHash macOS
 
-You can install this module from source:
+You have a few options to install this module:
+
+#### Option A: Install directly from GitHub (Recommended for latest version)
+
+You can install the latest version directly from the `main` branch on GitHub using `pip`:
 
 ```bash
-git clone https://github.com/rjadr/neuralhash-macos.git
+pip install git+https://github.com/yourusername/neuralhash-macos.git
+```
+Replace `yourusername/neuralhash-macos.git` with your actual GitHub repository URL.
+
+To install a specific branch, tag, or commit, you can append `@` followed by the reference:
+```bash
+# Install from a specific branch
+pip install git+https://github.com/yourusername/neuralhash-macos.git@develop_branch
+
+# Install from a specific tag (e.g., v0.1.0)
+pip install git+https://github.com/yourusername/neuralhash-macos.git@v0.1.0
+
+# Install from a specific commit hash
+pip install git+https://github.com/yourusername/neuralhash-macos.git@your_commit_hash
+```
+
+#### Option B: Install from a local clone (For development or specific versions)
+
+Clone the repository and install using `pip`:
+
+```bash
+git clone https://github.com/yourusername/neuralhash-macos.git # Replace with your repo URL
 cd neuralhash-macos
 pip install .
 ```
 
-Or, for development:
-
+For development, you can install it in editable mode:
 ```bash
 pip install -e .
 ```
+This allows you to make changes to the code and have them immediately reflected without reinstalling. If you plan to contribute or modify the code, this is the recommended method after cloning.
 
 ## Usage
 
