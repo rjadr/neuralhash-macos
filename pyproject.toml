@@ -1,0 +1,62 @@
+[build-system]
+requires = [
+    "setuptools>=61.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+# backend-path = ["."] # <--- REMOVE THIS LINE
+
+[project]
+name = "neuralhash-macos"
+dynamic = ["version"] # Indicates version is found elsewhere (e.g., setup.py or setuptools_scm)
+description = "Python module to compute NeuralHashes for images on macOS using private Vision APIs."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["neuralhash", "vision", "macos", "image-hashing", "perceptual-hash", "apple", "private-api"]
+authors = [
+    {name = "Your Name (Original concept by KhaosT)", email = "your.email@example.com"} # Replace
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Private :: Do Not Upload to PyPI",
+]
+
+dependencies = [
+    "pyobjc-core>=9.0",
+    "pyobjc-framework-Cocoa>=9.0",
+    "pyobjc-framework-Vision>=9.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/neuralhash-macos" # Replace
+"Source" = "https://github.com/yourusername/neuralhash-macos" # Replace
+"Original Concept (nhcalc)" = "https://github.com/KhaosT/nhcalc"
+
+[project.scripts]
+neuralhash-macos = "neuralhash_macos.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-mock>=3.0",
+    "Pillow>=9.0",
+    "flake8",
+    "pylint",
+    "black",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "neuralhash_macos.__version__"} # Tells setuptools where to find the version

@@ -1,0 +1,8 @@
+# Core dependencies for neuralhash-macos
+# These are required for the module to function.
+# Versions are kept broad (>=9.0) as PyObjC compatibility
+# can be specific to macOS versions. Users might need to adjust.
+
+pyobjc-core>=9.0
+pyobjc-framework-Cocoa>=9.0
+pyobjc-framework-Vision>=9.0
