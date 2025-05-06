@@ -40,7 +40,7 @@ pip install pyobjc-core pyobjc-framework-Cocoa pyobjc-framework-Vision
 You can install this module from source:
 
 ```bash
-git clone https://github.com/rjadr/neuralhash-macos.git # Replace with your repo URL
+git clone https://github.com/rjadr/neuralhash-macos.git
 cd neuralhash-macos
 pip install .
 ```
